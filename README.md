@@ -60,7 +60,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
     -D BUILD_EXAMPLES=ON ..
 ```
-
+make and install opencv.
 ```	
 $$ make -j4
 
@@ -68,26 +68,42 @@ $ sudo make install
 $ sudo ldconfig
 $ cd ~
 ```
-
+add open cv to the virtual enviornment.
 ```
 $ cd ~/.virtualenvs/dl4cv/lib/python3.5/site-packages/
 $ ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 $ cd ~
 ```
 
+
+### Keras with Tensorflow
+denpendencies for keras/fensorflow
 ```
 $ pip install scipy matplotlib pillow
 $ pip install imutils h5py requests progressbar2
 $ pip install scikit-learn scikit-image
 ```
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+install tensorflow GPU version and keras.
 ```
-Give an example
+$ pip install tensorflow-gpu
+
+$ pip install keras
 ```
+head to ~/.keras/keras.json and check the configuration is as followed.
+```
+{
+    "image_data_format": "channels_last",
+    "backend": "tensorflow",
+    "epsilon": 1e-07,
+    "floatx": "float32"
+}
+```
+### Mask-rcnn model and test video
+
+use```pycocotools``` to test and train MS COCO.
+Download pre-trained [coco model]() and [test video]().
+
+
 
 ### And coding style tests
 
@@ -96,36 +112,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
 
 * Hat tip to anyone who's code was used
 * Inspiration
