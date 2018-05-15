@@ -101,18 +101,7 @@ head to ~/.keras/keras.json and check the configuration is as followed.
 ### Mask-rcnn model and test video
 
 use```pycocotools``` to test and train MS COCO.
-Download pre-trained [coco model]() and [test video]().
+Download pre-trained [coco model](https://github.com/matterport/Mask_RCNN/releases) and [test video]().
+Save coco model under ```./Mask-RCNN/models```, test video is for testing only, don't need it for real application.
 
 
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
